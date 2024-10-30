@@ -48,7 +48,7 @@ sdtm.oak:::dataset_oak_vignette(
 
 # Programming workflow
 
-In {sdtm.oak} we process one raw dataset at a time. Similar raw datasets (example Concomitant medications (OID - cm_raw), Targeted Concomitant Medications (OID - cm_t_raw)) can be stacked together before processing.
+In `{sdtm.oak}` we process one raw dataset at a time. Similar raw datasets (example Concomitant medications (OID - cm_raw), Targeted Concomitant Medications (OID - cm_t_raw)) can be stacked together before processing.
 
 * [Read in data](#readdata)
 * [Create oak_id_vars](#oakidvars)
@@ -81,7 +81,7 @@ cm_raw <- read.csv(system.file("raw_data/cm_raw_data.csv",
 
 ## Create oak_id_vars {#oakidvars}
 
-The `oak_id_vars` is a crucial link between the raw datasets and the mapped SDTM domain. As the user derives each SDTM variable, it is merged with the corresponding topic variable using `oak_id_vars`. In {sdtm.oak}, the variables oak_id, raw_source, and patient_number are considered as `oak_id_vars`. These three variables must be added to all raw datasets. They are used in multiple places in the programming.
+The `oak_id_vars` is a crucial link between the raw datasets and the mapped SDTM domain. As the user derives each SDTM variable, it is merged with the corresponding topic variable using `oak_id_vars`. In `{sdtm.oak}`, the variables oak_id, raw_source, and patient_number are considered as `oak_id_vars`. These three variables must be added to all raw datasets. They are used in multiple places in the programming.
 
 oak_id:- Type: numeric- Value: equal to the raw dataframe row number.
 
@@ -334,7 +334,7 @@ sdtm.oak:::dataset_oak_vignette(
 
 Remember to use additional curly braces in the function call when using the `condition_add` function on the target dataset. This is necessary because the input target dataset is represented as a `.` and is passed on from the previous step using the {magrittr} pipe operator. Currently, there is a limitation when using a nested function call with `.` to reference one of the input parameters, and this [recommended approach](https://magrittr.tidyverse.org/reference/pipe.html#using-the-dot-for-secondary-purposes) will overcome that.
 
-The placeholder `.` is for use with {magrittr} pipe `%>%` operator. We encourage using `.` and {magrittr} pipe `%>%` operator when using {sdtm.oak} functions.
+The placeholder `.` is for use with {magrittr} pipe `%>%` operator. We encourage using `.` and {magrittr} pipe `%>%` operator when using `{sdtm.oak}` functions.
 
 Another way to achieve the same outcome is by moving the 'condition_by' call up one level, as illustrated below: it is not required to use the {magrittr} pipe `%>%` or curly braces in this case.
 
