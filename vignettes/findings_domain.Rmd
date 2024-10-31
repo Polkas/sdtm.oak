@@ -22,15 +22,15 @@ library(dplyr, warn.conflicts = FALSE)
 
 # Introduction
 
-This article describes how to create a Findings SDTM domain using the {sdtm.oak} package. Examples are currently presented and tested in the context of the VS domain.
+This article describes how to create a Findings SDTM domain using the `{sdtm.oak}` package. Examples are currently presented and tested in the context of the VS domain.
 
-Before reading this article, it is recommended that users review the "Creating an Events Domain" article, which provides a detailed explanation of various concepts in {sdtm.oak}, such as `oak_id_vars`, `condition_add`, etc. It also offers guidance on which mapping algorithms or functions to use for different mappings and provides a more detailed explanation of how these mapping algorithms or functions work.
+Before reading this article, it is recommended that users review the "Creating an Events Domain" article, which provides a detailed explanation of various concepts in `{sdtm.oak}`, such as `oak_id_vars`, `condition_add`, etc. It also offers guidance on which mapping algorithms or functions to use for different mappings and provides a more detailed explanation of how these mapping algorithms or functions work.
 
 In this article, we will dive directly into programming and provide further explanation only where it is required.
 
 # Programming workflow
 
-In {sdtm.oak} we process one raw dataset at a time. Similar raw datasets (example Vital Signs - Screening (OID - vs_raw), Vital Signs - Treatment (OID - vs_t_raw)) can be stacked together before processing.
+In `{sdtm.oak}` we process one raw dataset at a time. Similar raw datasets (example Vital Signs - Screening (OID - vs_raw), Vital Signs - Treatment (OID - vs_t_raw)) can be stacked together before processing.
 
 * [Read in data](#readdata)
 * [Create oak_id_vars](#oakidvars)

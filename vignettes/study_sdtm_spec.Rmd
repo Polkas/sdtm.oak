@@ -25,20 +25,20 @@ knitr::opts_chunk$set(
 options(rmarkdown.html_vignette.check_title = FALSE)
 ```
 
-The initial release of {sdtm.oak} provides a framework for modular programming of SDTM in R and sets the stage for potential automation of SDTM creation following the standardized SDTM specification. In the future, the automation workflow could involve preparing specifications and then making automated function calls to generate SDTM domains.
+The initial release of `{sdtm.oak}` provides a framework for modular programming of SDTM in R and sets the stage for potential automation of SDTM creation following the standardized SDTM specification. In the future, the automation workflow could involve preparing specifications and then making automated function calls to generate SDTM domains.
 
 The future workflow for automation could look like:
 
 1. Prepare SDTM specification: Users can define the raw data source, target SDTM domain, target SDTM variables, and algorithms used for automation. A template is still under development; details are also provided in this article.
 2. Prepare SDTM-controlled Terminology: Users can define the SDTM-controlled terms applicable to the study. A template is still under development.
-3. An automated process to read the specification and make {sdtm.oak} function calls can create the code required to generate SDTM datasets or the datasets themselves.
+3. An automated process to read the specification and make `{sdtm.oak}` function calls can create the code required to generate SDTM datasets or the datasets themselves.
 
-This article provides an overview of metadata and a draft version of the standard SDTM specification. We plan to demonstrate the creation of standard SDTM specs from the CDISC library in collaboration with CDISC COSA. Sponsors may need to establish the necessary tools to generate this SDTM specification from their MDR to utilize the automation features of {sdtm.oak}. It's worth mentioning that this concept draws inspiration from Roche's existing implementation of the SDTM automation process using OAK. I would like to inform you that further development is required for this concept.
+This article provides an overview of metadata and a draft version of the standard SDTM specification. We plan to demonstrate the creation of standard SDTM specs from the CDISC library in collaboration with CDISC COSA. Sponsors may need to establish the necessary tools to generate this SDTM specification from their MDR to utilize the automation features of `{sdtm.oak}`. It's worth mentioning that this concept draws inspiration from Roche's existing implementation of the SDTM automation process using OAK. I would like to inform you that further development is required for this concept.
 
 Throughout this article, the term "metadata" 
 is used several times. In this context, "metadata" refers to the specific 
-metadata used by {sdtm.oak}. This article aims to provide users with a more 
-detailed understanding of the {sdtm.oak} metadata.
+metadata used by `{sdtm.oak}`. This article aims to provide users with a more 
+detailed understanding of the `{sdtm.oak}` metadata.
 
 In general, metadata can be defined as "data about data." It does not include 
 any patient-level data. Instead, the metadata provides a blueprint of the data 
@@ -46,7 +46,7 @@ that needs to be collected during a study.
 
 ## Standards Metadata
 
-The standards metadata used in {sdtm.oak} is sourced from the CDISC Library or 
+The standards metadata used in `{sdtm.oak}` is sourced from the CDISC Library or 
 sponsor MDR or any other form of documentation where standards are maintained. 
 This metadata provides information on the following:
 
@@ -56,7 +56,7 @@ and Controlled Terminology
 - Algorithms and associated metadata required for the SDTM automation of 
 standards in the study.
 
-In the upcoming releases of {sdtm.oak}, we will effectively utilize the 
+In the upcoming releases of `{sdtm.oak}`, we will effectively utilize the 
 standards metadata and customize it to meet the study requirements.
 
 ## Study Definition Metadata
@@ -88,7 +88,7 @@ eDT Metadata is the blueprint metadata that describes the data collected as part
 
 ## Study SDTM Mappings Metadata (specifications)
 
-Study SDTM mappings metadata is the study SDTM specification. To develop the SDTM domains, {sdtm.oak} requires the user to prepare the Study SDTM mappings metadata. Unlike the conventional SDTM specification, which includes one tab per domain defining the target (SDTM domain, Variables) to source (raw dataset, raw variables) and SDTM mappings, the SDTM spec for {sdtm.oak} defines the source-to-target relationship. For each source, the SDTM mapping, algorithms, and associated metadata are defined. The table below presents the columns in the SDTM mapping specification and its explanation.
+Study SDTM mappings metadata is the study SDTM specification. To develop the SDTM domains, `{sdtm.oak}` requires the user to prepare the Study SDTM mappings metadata. Unlike the conventional SDTM specification, which includes one tab per domain defining the target (SDTM domain, Variables) to source (raw dataset, raw variables) and SDTM mappings, the SDTM spec for {sdtm.oak} defines the source-to-target relationship. For each source, the SDTM mapping, algorithms, and associated metadata are defined. The table below presents the columns in the SDTM mapping specification and its explanation.
 
 <div class="wide">
 ```{r echo = FALSE, results = "asis"}

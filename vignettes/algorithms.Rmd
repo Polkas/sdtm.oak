@@ -14,7 +14,7 @@ editor_options:
 
 SDTM mappings are defined as algorithms that transform the collected
 (eCRF, eDT) source data into the target SDTM data model. Mapping
-algorithms are the backbone of the {sdtm.oak} - SDTM data transformation
+algorithms are the backbone of the `{sdtm.oak}` - SDTM data transformation
 engine.
 
 **Key Points:**
@@ -25,7 +25,7 @@ engine.
     (if applicable) to facilitate automation.
     
 -   Programming language agnostic - this concept does not rely on a
-    specific programming language for implementation. The {sdtm.oak} team
+    specific programming language for implementation. The `{sdtm.oak}` team
     implemented them as R functions.
 
 Here is an example of reusing an algorithm across multiple domains,
@@ -35,7 +35,7 @@ variables, and also to a non-standard
 
 ## List of Algorithms
 
-This release of {sdtm.oak} supports the following algorithms: assign_no_ct, assign_ct, hardcode_no_ct, hardcode_ct, assign_datetime, condition_add. Rest of the algorithms will be developed in the subsequent releases.
+This release of `{sdtm.oak}` supports the following algorithms: assign_no_ct, assign_ct, hardcode_no_ct, hardcode_ct, assign_datetime, condition_add. Rest of the algorithms will be developed in the subsequent releases.
 
 The following table provides a brief description of each algorithm.
 
@@ -201,7 +201,7 @@ knitr::kable(algorithms)
 
 ## Sub-algorithms
 
-{sdtm.oak} supports two levels for defining algorithms. For example, there
+`{sdtm.oak}` supports two levels for defining algorithms. For example, there
 are some SDTM mappings where a certain action has to be taken only when
 a condition is met. In such cases, the primary algorithm checks for the
 condition, and the sub-algorithm executes the mappings when the
